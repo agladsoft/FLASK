@@ -4,6 +4,7 @@ from flask_wtf.file import FileField
 from wtforms import SubmitField
 
 app = Flask(__name__)
+app.config['MAX_CONTENT_LENGTH'] = 160 * 1024 * 1024
 
 
 class MyForm(FlaskForm):
